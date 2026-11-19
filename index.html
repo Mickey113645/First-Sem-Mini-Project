@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f5f0" />
+  <title>Travel Atlas — Your next story starts here</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="auth-page">
+    <section class="photo-panel" aria-label="Travel inspiration">
+      <img class="hero-image"
+        src="./images/travel-inspiration.png"
+        alt="Travel collage featuring a mountain lake, an airplane, boats, and a globe" />
+    </section>
+
+    <section class="form-panel">
+      <a class="brand" href="#" aria-label="Travel Atlas home">
+        <img src="./images/logo.png" alt="Travel Atlas — Pin your memories" />
+      </a>
+
+      <div class="form-content">
+        <div id="login-view">
+          <h2>Welcome back</h2>
+          <p class="form-subtitle">Log in to continue your journey.</p>
+          <form id="login-form">
+            <label for="login-email">Email address</label>
+            <input id="login-email" name="username" type="email" placeholder="you@example.com" autocomplete="email"
+              required />
+            <label for="login-password">Password</label>
+            <div class="password-field">
+              <input id="login-password" name="password" type="password" placeholder="Enter your password"
+                autocomplete="current-password" required />
+              <button class="show-password" type="button" aria-label="Show password"
+                data-password="login-password">Show</button>
+            </div>
+            <button class="primary-button" type="submit">Log in</button>
+          </form>
+          <p class="switch-copy">New to Travel Atlas? <button class="text-button" type="button"
+              data-switch="signup">Create an account</button></p>
+        </div>
+
+        <div id="signup-view" hidden>
+          <h2>Create your account</h2>
+          <p class="form-subtitle">Start collecting places and memories.</p>
+          <form id="signup-form">
+            <label for="signup-name">Full name</label>
+            <input id="signup-name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            <label for="signup-email">Email address</label>
+            <input id="signup-email" name="username" type="email" placeholder="you@example.com" autocomplete="email"
+              required />
+            <label for="signup-password">Password</label>
+            <div class="password-field">
+              <input id="signup-password" name="password" type="password" placeholder="At least 8 characters"
+                autocomplete="new-password" minlength="8" required />
+              <button class="show-password" type="button" aria-label="Show password"
+                data-password="signup-password">Show</button>
+            </div>
+            <label for="confirm-password">Confirm password</label>
+            <input id="confirm-password" name="confirm-password" type="password" placeholder="Re-enter your password"
+              autocomplete="new-password" minlength="8" required />
+            <label class="terms">
+              <input type="checkbox" required />
+              <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</span>
+            </label>
+            <button class="primary-button" type="submit">Create account</button>
+          </form>
+          <p class="switch-copy">Already have an account? <button class="text-button" type="button"
+              data-switch="login">Log in</button></p>
+        </div>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

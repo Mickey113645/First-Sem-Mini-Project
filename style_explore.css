@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #fff7e9;
+    background-color: #2B231B;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-header {
+    min-height: 120px;
+    padding: 15px 5%;
+    border-bottom: 2px solid #c6a15b;
+    background-color: #FFE7C2;
+}
+
+.brand {
+    color: #06452f;
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.brand img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.main-nav {
+    white-space: nowrap;
+}
+
+.main-nav a {
+    color: #06452f;
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 9px 18px;
+    border-radius: 40px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: white;
+    background-color: #285447;
+}
+
+.feature-grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 45px auto 0;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-grid img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 367 / 600;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.section-heading h1 {
+    color: #c6a15b;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: #e9ddc9;
+}
+
+.eyebrow {
+    color: #c6a15b;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.destination-card {
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid #c6a15b;
+    border-radius: 12px;
+    background-color: #fff7e9;
+    color: #2B231B;
+}
+
+.card-photo {
+    height: 280px;
+    overflow: hidden;
+}
+
+.card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover .card-photo img {
+    transform: scale(1.05);
+}
+
+.card-region {
+    background-color: #2B231B !important;
+    color: white;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+}
+
+.save-button {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff7e9;
+    color: #285447;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.save-button.saved {
+    background-color: #285447;
+    color: white;
+}
+
+.photo-caption {
+    text-shadow: 1px 1px 5px black;
+}
+
+.card-country {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-cities {
+    font-size: 0.9rem;
+}
+
+.card-content {
+    min-height: 250px;
+    padding: 20px;
+}
+
+.card-kicker {
+    color: #285447;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    color: #51483e;
+    font-size: 0.95rem;
+}
+
+.card-meta {
+    color: #51483e;
+    font-size: 0.85rem;
+    border-color: #d7c7ad !important;
+}
+
+.card-meta strong {
+    color: #285447;
+}
+
+.card-footer {
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    border: none;
+    color: #285447;
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #285447;
+    border-color: #285447;
+}
+
+.btn-success:hover {
+    background-color: #1d3d33;
+    border-color: #1d3d33;
+}
+
+.trip-planner {
+    background-color: #FFE7C2;
+    color: #2B231B;
+}
+
+.trip-planner h2 {
+    color: #285447;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.trip-planner p {
+    color: #51483e;
+}
+
+.guide-dialog {
+    width: 90%;
+    max-width: 550px;
+    padding: 35px;
+    border: 2px solid #c6a15b;
+    border-radius: 15px;
+    background-color: #fff7e9;
+    color: #2B231B;
+    position: relative;
+}
+
+.guide-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dialog-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    color: #285447;
+    font-size: 2rem;
+}
+
+.guide-dialog h2 {
+    color: #285447;
+    margin-bottom: 15px;
+}
+
+.guide-intro {
+    color: #51483e;
+}
+
+.guide-facts {
+    margin-top: 25px;
+}
+
+.guide-facts div {
+    padding: 12px 0;
+    border-bottom: 1px solid #d7c7ad;
+}
+
+.guide-facts strong {
+    color: #285447;
+}
+
+.guide-facts p {
+    margin: 5px 0 0;
+    color: #51483e;
+}
+
+.guide-budget {
+    margin-top: 20px;
+    color: #285447;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        gap: 15px;
+    }
+
+    .brand {
+        font-size: 1.7rem;
+    }
+
+    .brand img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .feature-grid {
+        max-width: 650px;
+        gap: 12px;
+    }
+
+    .card-photo {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+
+    .main-nav {
+        gap: 5px !important;
+    }
+
+    .main-nav a {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+    }
+
+    .guide-dialog {
+        padding: 25px;
+    }
+}

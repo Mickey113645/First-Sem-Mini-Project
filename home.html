@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffebcb">
+  <title>Travel Atlas | Pin Your Memories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Travel Atlas home">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="./images/logo.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+        <span class="brand-fallback">A</span>
+      </span>
+      <span class="brand-name">Travel Atlas</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <a class="nav-link" href="explore.html">Explore</a>
+      <a class="nav-link" href="wish-list.html">Wish Listr</a>
+      <a class="nav-link" href="my-atlas.html">My Atlas</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section class="hero-copy" aria-labelledby="hero-title">
+      <h1 id="hero-title">The world is<br>full of<br>undiscovered<br>stories.</h1>
+      <p>Discover hidden places, plan extraordinary journeys and create your own travel history.</p>
+      <a class="explore-button" href="#atlas-map">Start Exploring <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="map-column" aria-label="Featured destinations map">
+      <div class="atlas-map" id="atlas-map">
+        <svg class="world-map" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-labelledby="map-title map-description">
+          <title id="map-title">Travel Atlas world map</title>
+          <desc id="map-description">An illustrated world map with clickable destinations in Canada, Peru, Iceland, Italy, Egypt, Kenya, Thailand and Japan.</desc>
+
+          <g class="continents">
+            <path d="M80 100 L140 65 L230 75 L285 125 L260 180 L225 220 L180 235 L130 205 L95 155 Z"/>
+            <path d="M240 265 L300 280 L325 340 L300 410 L270 465 L250 410 L235 340 Z"/>
+            <path d="M410 105 L465 85 L510 105 L495 150 L455 165 L420 145 Z"/>
+            <path d="M430 185 L510 180 L550 230 L530 320 L485 390 L455 340 L430 260 Z"/>
+            <path d="M515 95 L610 65 L750 75 L830 135 L805 195 L735 220 L660 205 L605 170 L550 165 Z"/>
+            <path d="M700 320 L770 305 L815 340 L790 385 L730 390 L690 355 Z"/>
+            <path d="M300 35 L355 20 L385 55 L365 95 L320 90 Z"/>
+          </g>
+
+          <path class="travel-route" d="M180 150 Q300 30 455 125 Q550 190 750 160"/>
+          <text class="airplane" x="340" y="90" transform="rotate(-20 340 90)" aria-hidden="true">✈</text>
+
+          <a class="country-marker" href="pages/destination.html?id=ca" aria-label="Explore Canada">
+            <circle cx="180" cy="150" r="8"/><rect x="175" y="162" width="10" height="8"/><text x="195" y="154">Canada</text>
+          </a>
+          <a class="country-marker" href="pages/destination.html?id=pe" aria-label="Explore Peru">
+            <circle cx="270" cy="320" r="8"/><rect x="265" y="332" width="10" height="8"/><text x="285" y="324">Peru</text>
+          </a>
+          <a class="country-marker" href="pages/destination.html?id=is" aria-label="Explore Iceland">
+            <circle cx="390" cy="95" r="8"/><rect x="385" y="107" width="10" height="8"/><text x="405" y="99">Iceland</text>
+          </a>
+          <a class="country-marker" href="pages/destination.html?id=it" aria-label="Explore Italy">
+            <circle cx="470" cy="140" r="8"/><rect x="465" y="152" width="10" height="8"/><text x="485" y="144">Italy</text>
+          </a>
+          <a class="country-marker" href="pages/destination.html?id=eg" aria-label="Explore Egypt">
+            <circle cx="500" cy="220" r="8"/><rect x="495" y="232" width="10" height="8"/><text x="515" y="224">Egypt</text>
+          </a>
+          <a class="country-marker" href="pages/destination.html?id=ke" aria-label="Explore Kenya">
+            <circle cx="500" cy="305" r="8"/><rect x="495" y="317" width="10" height="8"/><text x="515" y="309">Kenya</text>
+          </a>
+          <a class="country-marker" href="pages/destination.html?id=th" aria-label="Explore Thailand">
+            <circle cx="685" cy="190" r="8"/><rect x="680" y="202" width="10" height="8"/><text x="700" y="194">Thailand</text>
+          </a>
+          <a class="country-marker" href="pages/destination.html?id=jp" aria-label="Explore Japan">
+            <circle cx="790" cy="150" r="8"/><rect x="785" y="162" width="10" height="8"/><text x="805" y="154">Japan</text>
+          </a>
+
+          <g class="compass" transform="translate(770 370)" aria-hidden="true">
+            <circle class="compass-ring" r="72"/>
+            <path d="M0 -55 L15 0 L0 55 L-15 0 Z" class="compass-vertical"/>
+            <path d="M-55 0 L0 -15 L55 0 L0 15 Z" class="compass-horizontal"/>
+            <circle r="8" class="compass-center"/>
+            <text x="-5" y="-82">N</text>
+          </g>
+        </svg>
+      </div>
+      <p class="map-caption">✦ Tap a country to begin your next adventure ✦</p>
+    </section>
+  </main>
+
+  <script src="home.js"></script>
+</body>
+</html>

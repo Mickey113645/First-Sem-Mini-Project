@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Atlas</title>
+    <link rel="stylesheet" href="my-atlas.css">
+    <script src="my-atlas.js" defer></script>
+</head>
+<body>
+
+<header class="site-header d-flex flex-column flex-sm-row align-items-center justify-content-between" id="top">
+
+    <a href="home.html" class="brand d-flex align-items-center gap-2 fw-bold">
+        <span class="brand-mark">
+            <img src="./images/logo.png" alt="Travel Atlas logo">
+        </span>
+        <span>Travel Atlas</span>
+    </a>
+
+    <nav class="main-nav d-flex flex-wrap align-items-center justify-content-center gap-4">
+        <a href="home.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="wish-list.html">Wish List</a>
+        <a href="my-atlas.html" class="active px-3 py-2 rounded-pill bg-success text-white">My Atlas</a>
+    </nav>
+
+</header>
+
+
+    <main class="container">
+        <section class="heading">
+            <h1>My Travel Atlas</h1>
+            <p>Keep track of all the places you have explored!</p>
+        </section>
+
+        <section class="progress-section">
+            <h3>Your Travel Progress</h3>
+            <p id="progress-text">0 out of 0 places visited</p>
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+        </section>
+
+        <section class="add-section">
+            <h2>Add a Place</h2>
+            <div class="input-area">
+                <input type="text" id="place-input" placeholder="Enter a place you have visited">
+                <button id="add-button">Add Place</button>
+            </div>
+        </section>
+
+        <section class="places-section">
+            <h2>My Places</h2>
+            <div id="atlas-items">
+                <p>Loading your places...</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

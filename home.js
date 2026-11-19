@@ -1,0 +1,21 @@
+const user = JSON.parse(localStorage.getItem("user"))
+if (!user) window.location.href = "index.html"
+
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".primary-nav");
+
+if (menuButton && navigation) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("is-open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+  });
+
+  navigation.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navigation.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Open navigation");
+    });
+  });
+}

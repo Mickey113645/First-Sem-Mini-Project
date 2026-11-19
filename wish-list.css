@@ -1,0 +1,171 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #2B231B;
+    color: #fff7e9;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-header {
+    min-height: 100px;
+    padding: 20px 5%;
+    background-color: #FFE7C2;
+    border-bottom: 2px solid #c6a15b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.brand {
+    color: #06452f;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.main-nav a {
+    color: #06452f;
+    font-size: 1.2rem;
+    padding: 9px 15px;
+    border-radius: 30px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: white;
+    background-color: #285447;
+}
+
+.wishlist-container {
+    max-width: 850px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.wishlist-container h1 {
+    color: #c6a15b;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: #e9ddc9;
+    margin-bottom: 30px;
+}
+
+.add-place {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.add-place input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #c6a15b;
+    border-radius: 8px;
+    background-color: #fff7e9;
+    color: #2B231B;
+}
+
+.add-place button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #285447;
+    color: white;
+    cursor: pointer;
+}
+
+.add-place button:hover {
+    background-color: #1d3d33;
+}
+
+#wishlist-items {
+    padding: 0;
+    list-style: none;
+}
+
+#wishlist-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 18px;
+    margin-bottom: 12px;
+    border: 1px solid #c6a15b;
+    border-radius: 10px;
+    background-color: #fff7e9;
+    color: #2B231B;
+}
+
+.remove-button {
+    padding: 7px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #a33b32;
+    color: white;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #812c25;
+}
+
+@media (max-width: 600px) {
+
+    .site-header {
+        justify-content: center;
+    }
+
+    .brand {
+        font-size: 1.7rem;
+    }
+
+    .main-nav {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .main-nav a {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .wishlist-container h1 {
+        font-size: 2rem;
+    }
+}
+.brand-mark {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
